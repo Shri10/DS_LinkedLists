@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DS_LinkedLists
 {
-    internal class LinkedList
+    public class LinkedList
     {
         public class Node
         {
@@ -23,6 +23,22 @@ namespace DS_LinkedLists
         {
             Head = null;
         }
+        public Node Search(int value)
+        {
+            Node currentNode = Head;
+
+            while (currentNode != null)
+            {
+                if (currentNode.Data == value)
+                {
+                    return currentNode;
+                }
+                currentNode = currentNode.Next;
+            }
+
+            return null;
+        }
+
 
         public void AddNode(int data)
         {

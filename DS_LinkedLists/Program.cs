@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using static DS_LinkedLists.LinkedList;
 
 namespace DS_LinkedLists
 {
@@ -22,13 +23,27 @@ namespace DS_LinkedLists
             LList.InsertAtPosition(1 , 70);
             LList.InsertAtPosition(1 , 30);
 
-            Console.WriteLine("LinkedList before popLast operation:");
+
+            /*Console.WriteLine("LinkedList before popLast operation:");
             LList.PrintList();
 
             LList.PopLast();
 
             Console.WriteLine("LinkedList after popLast operation:");
-            LList.PrintList();
+            LList.PrintList();*/
+
+            Console.WriteLine("Searching for Node with value 30:");
+            Node foundNode = LList.Search(30);
+            if (foundNode != null)
+            {
+                Console.WriteLine("Node found with value: " + foundNode.Data);
+            }
+            else
+            {
+                Console.WriteLine("Node not found!");
+            }
+
+
 
         }
     }
