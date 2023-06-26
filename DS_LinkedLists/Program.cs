@@ -1,4 +1,6 @@
-﻿namespace DS_LinkedLists
+﻿using System.Collections.Generic;
+
+namespace DS_LinkedLists
 {
     internal class Program
     {
@@ -6,6 +8,14 @@
         {
             Console.WriteLine("Hello, here We'll be working on LinkedList!");
 
+            LinkedList LList = new LinkedList();
+
+            LList.AddNode(56);
+            LList.AddNode(30);
+            LList.AddNode(70);
+
+            LList.PrintList();
+            
 
         }
     }
