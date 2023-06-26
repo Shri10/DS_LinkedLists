@@ -14,8 +14,7 @@ namespace DS_LinkedLists
             LList.AddNode(30);
             LList.AddNode(70);
 
-            LList.PrintList();
-            
+          
 
         }
     }

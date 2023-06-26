@@ -47,18 +47,5 @@ namespace DS_LinkedLists
             }
         }
 
-        public void PrintList()
-        {
-            Node currentNode = Head;
-
-            while (currentNode != null)
-            {
-                Console.Write(currentNode.Data + " ");
-                currentNode = currentNode.Next;
-            }
-
-            Console.WriteLine();
-        }
-
     }
 }
