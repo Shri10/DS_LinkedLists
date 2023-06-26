@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DS_LinkedLists
 {
@@ -47,6 +43,13 @@ namespace DS_LinkedLists
             }
         }
 
+        public void AddToStart(int data)
+        {
+            Node newNode = new Node(data);
+            newNode.Next = Head;
+            Head = newNode;
+        }
+
         public void PrintList()
         {
             Node currentNode = Head;
@@ -59,6 +62,5 @@ namespace DS_LinkedLists
 
             Console.WriteLine();
         }
-
     }
 }
