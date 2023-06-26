@@ -89,6 +89,29 @@ namespace DS_LinkedLists
             Head = Head.Next;
         }
 
+        public void PopLast()
+        {
+            if (Head == null)
+            {
+                throw new InvalidOperationException("Empty LinkedList");
+            }
+
+            if (Head.Next == null)
+            {
+                Head = null;
+            }
+            else
+            {
+                Node currentNode = Head;
+                while (currentNode.Next.Next != null)
+                {
+                    currentNode = currentNode.Next;
+                }
+
+                currentNode.Next = null;
+            }
+        }
+
         public void PrintList()
         {
             Node currentNode = Head;
