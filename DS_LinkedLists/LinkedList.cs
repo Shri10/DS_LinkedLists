@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DS_LinkedLists
 {
@@ -48,6 +49,34 @@ namespace DS_LinkedLists
             Node newNode = new Node(data);
             newNode.Next = Head;
             Head = newNode;
+        }
+
+        public void InsertAtPosition(int position, int data)
+        {
+            Node newNode = new Node(data);
+
+            if (Head == null || position == 0)
+            {
+                AddToStart(data);
+            }
+            else
+            {
+                Node currentNode = Head;
+                for (int i = 0; i < position - 1; i++)
+                {
+                    if (currentNode.Next != null)
+                    {
+                        currentNode = currentNode.Next;
+                    }
+                    else
+                    {
+                        throw new IndexOutOfRangeException("Position is greater than the length of LinkedList");
+                    }
+                }
+
+                newNode.Next = currentNode.Next;
+                currentNode.Next = newNode;
+            }
         }
 
         public void PrintList()
