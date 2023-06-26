@@ -7,7 +7,7 @@ namespace LinkedListTestProject
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void SearchedNodeWithValue()
         {
             LinkedList LList = new LinkedList();
             LList.AddNode(56);
@@ -17,5 +17,20 @@ namespace LinkedListTestProject
             var result = LList.Search(30);
             Assert.AreEqual(30, result.Data);
         }
+
+        [TestMethod]
+        public void InsertedAfterGivenValue()
+        {
+            LinkedList LList = new LinkedList();
+            LList.AddNode(56);
+            LList.AddNode(30);
+            LList.AddNode(70);
+            LList.InsertAfter(30, 40);
+
+            var resultAfter30 = LList.Search(30).Next;
+            Assert.AreEqual(40, resultAfter30.Data);
+        }
+
+
     }
 }

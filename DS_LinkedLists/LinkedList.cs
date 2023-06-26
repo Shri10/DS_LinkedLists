@@ -95,6 +95,21 @@ namespace DS_LinkedLists
             }
         }
 
+        public void InsertAfter(int existingNodeData, int newNodeData)
+        {
+            Node newNode = new Node(newNodeData);
+            Node existingNode = Search(existingNodeData);
+
+            if (existingNode == null)
+            {
+                Console.WriteLine($"Element {existingNodeData} is not present in the Linked List");
+                return;
+            }
+
+            newNode.Next = existingNode.Next;
+            existingNode.Next = newNode;
+        }
+
         public void Pop()
         {
             if (Head == null)
