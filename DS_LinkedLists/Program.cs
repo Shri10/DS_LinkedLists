@@ -22,7 +22,14 @@ namespace DS_LinkedLists
             LList.InsertAtPosition(1 , 70);
             LList.InsertAtPosition(1 , 30);
 
+            Console.WriteLine("LinkedList before pop operation:");
             LList.PrintList();
+
+            LList.Pop();
+
+            Console.WriteLine("LinkedList after pop operation:");
+            LList.PrintList();
+
         }
     }
 }
