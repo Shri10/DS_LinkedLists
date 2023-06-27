@@ -10,6 +10,7 @@ namespace DS_LinkedLists
             Console.WriteLine("Hello, here We'll be working on LinkedList!");
 
             LinkedList LList = new LinkedList();
+//            int size = LList.Size();
 
             LList.AddNode(56);
             LList.AddNode(30);
@@ -17,7 +18,17 @@ namespace DS_LinkedLists
 
             Console.WriteLine("Inserting 40 after 30");
             LList.InsertAfter(30, 40);
+            Console.WriteLine("List As of Now:");
             LList.PrintList();
+            Console.WriteLine($"Size of LinkedList: {LList.Size()}");
+
+            Console.WriteLine();
+            Console.WriteLine("Deleting 40");
+            LList.DeleteWithValue(40);
+            LList.PrintList();
+
+            Console.WriteLine($"Size of LinkedList: {LList.Size()}");
+
 
         }
     }
