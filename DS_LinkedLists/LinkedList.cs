@@ -155,5 +155,45 @@ namespace DS_LinkedLists
 
             Console.WriteLine();
         }
+
+        public void DeleteWithValue(int value)
+        {
+            Node temp = Head, prev = null;
+
+            if (temp != null && temp.Data == value)
+            {
+                Head = temp.Next;
+                return;
+            }
+
+            while (temp != null && temp.Data != value)
+            {
+                prev = temp;
+                temp = temp.Next;
+            }
+
+            if (temp == null)
+            {
+                Console.WriteLine($"Element {value} is not present in the Linked List");
+                return;
+            }
+
+            prev.Next = temp.Next;
+        }
+
+        public int Size()
+        {
+            Node temp = Head;
+            int size = 0;
+
+            while (temp != null)
+            {
+                size++;
+                temp = temp.Next;
+            }
+
+            return size;
+        }
+
     }
 }
